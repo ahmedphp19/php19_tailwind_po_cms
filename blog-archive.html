@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | PHP19</title>
+    <title>Blogs Archive | PHP19</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -83,7 +83,7 @@
     <header class="bg-blue-700 text-white pb-4 pt-12">
         <div class="max-w-screen-xl mx-auto px-4">
             <!-- Header Title (Left-aligned) -->
-            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Contact Us</h1>
+            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Blogs Archive</h1>
 
             <!-- Breadcrumb Navigation (Left-aligned with Icons and Tailwind Styling) -->
             <nav class="sm:mt-2">
@@ -102,7 +102,7 @@
                     </li>
 
                     <!-- About Us Link -->
-                    <li class="text-white-500">Contact Us</li>
+                    <li class="text-white-500">Blogs</li>
                 </ol>
             </nav>
 
@@ -113,47 +113,141 @@
     <main class="bg-gray-50 py-8">
         <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-             <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md space-y-6">
-                <!-- Blog Post Card -->
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-56 object-cover rounded-md mb-4">
-                    <h2 class="text-xl font-semibold text-gray-800">Blog Post Title</h2>
-                    <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nunc non neque sollicitudin, sit amet tincidunt ex auctor.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Read More &rarr;</a>
+           <!-- HERE LEFT SIDE CONTENT  -->
+            <!-- Left Side Content (Blog Grid with 10 Items) -->
+        <!-- Left Side Content (Blog Grid with 5 Items) -->
+        <div class="lg:col-span-2 space-y-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Blog Post Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-3 flex flex-col">
+                    <!-- Left Column: Thumbnail -->
+                    <div class="w-full h-auto mb-4">
+                        <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-auto object-cover rounded-md">
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-semibold text-gray-800">Blog Post Title 1</h2>
+
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-600">By <strong>Ahmed</strong> on <time datetime="2024-10-15" class="text-sm text-gray-500">October 15, 2024</time></span>
+                        </div>
+
+                        <div class="mt-2">
+                            <span class="text-sm text-blue-600">#PHP</span>
+                            <span class="text-sm text-blue-600 ml-2">#WebDevelopment</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Repeat for each blog post (you would loop through this in a dynamic system) -->
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-56 object-cover rounded-md mb-4">
-                    <h2 class="text-xl font-semibold text-gray-800">Blog Post Title</h2>
-                    <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nunc non neque sollicitudin, sit amet tincidunt ex auctor.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Read More &rarr;</a>
+                <!-- Blog Post Card 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+                    <!-- Left Column: Thumbnail -->
+                    <div class="w-full h-auto mb-4">
+                        <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-auto object-cover rounded-md">
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-semibold text-gray-800">Blog Post Title 2</h2>
+
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-600">By <strong>Ahmed</strong> on <time datetime="2024-10-15" class="text-sm text-gray-500">October 15, 2024</time></span>
+                        </div>
+
+                        <div class="mt-2">
+                            <span class="text-sm text-blue-600">#PHP</span>
+                            <span class="text-sm text-blue-600 ml-2">#WebDevelopment</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Pagination -->
-                <div class="flex justify-center mt-8">
-                    <nav aria-label="Page navigation">
-                        <ul class="inline-flex items-center space-x-4">
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <!-- Blog Post Card 3 -->
+                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+                    <!-- Left Column: Thumbnail -->
+                    <div class="w-full h-auto mb-4">
+                        <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-auto object-cover rounded-md">
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-semibold text-gray-800">Blog Post Title 3</h2>
+
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-600">By <strong>Ahmed</strong> on <time datetime="2024-10-15" class="text-sm text-gray-500">October 15, 2024</time></span>
+                        </div>
+
+                        <div class="mt-2">
+                            <span class="text-sm text-blue-600">#PHP</span>
+                            <span class="text-sm text-blue-600 ml-2">#WebDevelopment</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Blog Post Card 4 -->
+                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+                    <!-- Left Column: Thumbnail -->
+                    <div class="w-full h-auto mb-4">
+                        <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-auto object-cover rounded-md">
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-semibold text-gray-800">Blog Post Title 4</h2>
+
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-600">By <strong>Ahmed</strong> on <time datetime="2024-10-15" class="text-sm text-gray-500">October 15, 2024</time></span>
+                        </div>
+
+                        <div class="mt-2">
+                            <span class="text-sm text-blue-600">#PHP</span>
+                            <span class="text-sm text-blue-600 ml-2">#WebDevelopment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post Card 5 -->
+                <div class="bg-white shadow-md rounded-lg p-6 flex flex-col">
+                    <!-- Left Column: Thumbnail -->
+                    <div class="w-full h-auto mb-4">
+                        <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-auto object-cover rounded-md">
+                    </div>
+                    <!-- Right Column: Content -->
+                    <div class="flex flex-col">
+                        <h2 class="text-xl font-semibold text-gray-800">Blog Post Title 5</h2>
+
+                        <div class="mt-4">
+                            <span class="text-sm text-gray-600">By <strong>Ahmed</strong> on <time datetime="2024-10-15" class="text-sm text-gray-500">October 15, 2024</time></span>
+                        </div>
+
+                        <div class="mt-2">
+                            <span class="text-sm text-blue-600">#PHP</span>
+                            <span class="text-sm text-blue-600 ml-2">#WebDevelopment</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
+            <!-- Pagination -->
+            <div class="flex justify-center mt-8">
+                <nav aria-label="Page navigation">
+                    <ul class="inline-flex items-center space-x-4">
+                        <li>
+                            <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Previous</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
 
 
             <!-- Right Column: Sidebar with Widgets -->
