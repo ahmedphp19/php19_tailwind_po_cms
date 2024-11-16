@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | PHP19</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icons (optional for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS for Sticky Navbar (optional) -->
+    <style>
+        /* Optional: For sticky navbar effect */
+        .navbar {
+            transition: top 0.3s;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+    <!-- Navbar (Fixed on Scroll) -->
+    <nav class="navbar fixed top-0 left-0 w-full bg-white shadow-md z-10">
+        <div class="max-w-screen-xl mx-auto px-4 py-2">
+            <div class="flex items-center justify-between">
+                <!-- Logo or Brand Name -->
+                <a class="text-xl font-bold text-gray-800" href="#">PHP19</a>
+
+                <!-- Hamburger Menu for Mobile (Aligned to the Right) -->
+                <button class="lg:hidden text-gray-900 ml-auto mr-3 text-[1.4rem]" id="navbarToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Main Navigation Links on the Right (Desktop Only) -->
+                <div id="DesktopNav" class="hidden lg:flex items-center space-x-6 ml-auto mr-5">
+                    <a class="text-gray-800 hover:text-blue-500" href="/index.html">Home</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/projects.html">Projects</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/blog-archive.html">Blog</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="#">Freelancers</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/about.html">About</a>
+                    <a class="text-blue-800 hover:text-blue-500" href="/contact.html">Contact | Support
+
+                    </a>
+                </div>
+
+                <!-- Right-aligned "My Dashboard" Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="#"
+                        class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">My
+                        Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar (Hidden by default, shown on click) -->
+        <div class="lg:hidden hidden bg-gray-100" id="mobileNavbar">
+            <div class="flex flex-col items-end space-y-4 py-4 ml-auto mr-5">
+                <a class="text-gray-800 hover:text-blue-500" href="/index.html">Home</a>
+                <a class="text-gray-800 hover:text-blue-500" href="#">Projects</a>
+                <a class="text-gray-800 hover:text-blue-500" href="#">Freelancers</a>
+                <a class="text-gray-800 hover:text-blue-500" href="/about.html">About</a>
+                <a class="text-gray-800 hover:text-blue-500" href="/contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section (Full-width with background color, title, breadcrumbs, date, and author) -->
+    <header class="bg-blue-700 text-white pb-4 pt-12">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Header Title (Left-aligned) -->
+            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Projects</h1>
+
+            <!-- Breadcrumb Navigation (Left-aligned with Icons and Tailwind Styling) -->
+            <nav class="sm:mt-2">
+                <ol class="flex items-center space-x-3 text-sm sm:text-base text-gray-300">
+                    <!-- Home Link with Icon -->
+                    <li class="flex items-center">
+                        <a href="/" class="text-white-500 hover:text-white-700 flex items-center space-x-1">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <!-- Separator Icon -->
+                    <li class="text-white-400">
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <!-- About Us Link -->
+                    <li class="text-white-500">Projects</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="bg-gray-50 py-8">
+        <div class="max-w-screen-xl mx-auto px-4">
+
+            <!-- Tags and Categories Filter Section -->
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+                <!-- Filter by Categories Section -->
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Filter by Categories</h2>
+                    <div class="flex flex-wrap mb-6">
+                        <!-- Example Categories -->
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">Web Apps</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">Mobile Apps</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">E-commerce</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">SEO</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">Digital Marketing</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">Business Solutions</button>
+                        <button class="bg-white border border-gray-300 text-gray-600 py-2 px-4 rounded-full text-sm hover:bg-blue-700 mr-1 hover:text-white mb-2">UI/UX Design</button>
+                        
+                    </div>
+                </div>
+
+                <!-- Search Bar Section -->
+                <div class="w-[100%] md:w-[250px]">
+                    <input type="text" class="w-[100%] md:w-[250px] px-6 py-3 border border-blue-700 rounded-full text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Search Projects...">
+                </div>
+            </div>
+
+            <!-- Projects List Section -->
+            <div class="space-y-4">
+
+                <!-- Project Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col md:flex-row">
+                    <!-- Left Column: Thumbnail (80px width) -->
+                     <div class="w-full md:w-[80px] mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/400x300" alt="Project Thumbnail"
+                            class="w-auto h-full object-cover rounded-md">
+                    </div>
+
+                    <!-- Middle Column: Title and Description (60%) -->
+                    <div class="w-5/6 pl-6">
+                        <h3 class="text-ms font-semibold text-gray-800">Perfex CRM | Codeigniter CRM using bootstrap |
+                            Modules system to add new features</h3>
+                        <p class="text-gray-400 mt-2">Codeigniter based PHP Perfex crm proejct which can be expanded
+                            with new modules and themes, powerful features to manage contact, clients, leads, proects,
+                            tasks, timesheets, emails.</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-row md:flex-col justify-center md:ml-4">
+                        <!-- View Button -->
+                        <div class="mb-2 md:mb-0 md:mr-0 mr-2 md:mb-2">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto">View <i class="bi bi-eye"></i> </button>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div>  
+                            <button class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto">Download  </button>
+                        </div>
+                    </div>                    
+
+                </div>
+
+                <!-- Project Card 2 -->
+                <!-- Project Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col md:flex-row">
+                    <!-- Left Column: Thumbnail (80px width) -->
+                     <div class="w-full md:w-[80px] mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/400x300" alt="Project Thumbnail"
+                            class="w-auto h-full object-cover rounded-md">
+                    </div>
+
+                    <!-- Middle Column: Title and Description (60%) -->
+                    <div class="w-5/6 pl-6">
+                        <h3 class="text-md font-semibold text-gray-800">E-commerce Web App | Laravel with Vue.js |
+                            Real-time Shopping Cart</h3>
+                        <p class="text-gray-400 mt-2">A modern e-commerce platform built using Laravel and Vue.js with
+                            real-time shopping cart updates and secure payment integration.</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-row md:flex-col justify-center md:ml-4">
+                        <!-- View Button -->
+                        <div class="mb-2 md:mb-0 md:mr-0 mr-2 md:mb-2">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto">View <i class="bi bi-eye"></i> </button>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div>  
+                            <button class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto">Download  </button>
+                        </div>
+                    </div>   
+                </div>
+
+                <!-- Project Card 3 -->
+               <!-- Project Card 1 -->
+               <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col md:flex-row">
+                <!-- Left Column: Thumbnail (80px width) -->
+                 <div class="w-full md:w-[80px] mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/400x300" alt="Project Thumbnail"
+                            class="w-auto h-full object-cover rounded-md">
+                    </div>
+
+                    <!-- Middle Column: Title and Description (60%) -->
+                    <div class="w-5/6 pl-6">
+                        <h3 class="text-md font-semibold text-gray-800">Task Management System | React & Node.js | Time
+                            Tracking and Collaboration</h3>
+                        <p class="text-gray-400 mt-2">A powerful task management system designed with React and Node.js
+                            for efficient project collaboration and real-time time tracking.</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-row md:flex-col justify-center md:ml-4">
+                        <!-- View Button -->
+                        <div class="mb-2 md:mb-0 md:mr-0 mr-2 md:mb-2">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto">View <i class="bi bi-eye"></i> </button>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div>  
+                            <button class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto">Download  </button>
+                        </div>
+                    </div>   
+                </div>
+
+               <!-- Project Card 1 -->
+               <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col md:flex-row">
+                <!-- Left Column: Thumbnail (80px width) -->
+                 <div class="w-full md:w-[80px] mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/400x300" alt="Project Thumbnail"
+                            class="w-auto h-full object-cover rounded-md">
+                    </div>
+
+                    <!-- Middle Column: Title and Description (60%) -->
+                    <div class="w-5/6 pl-6">
+                        <h3 class="text-md font-semibold text-gray-800">Portfolio Website | HTML, CSS & JavaScript |
+                            Responsive Design</h3>
+                        <p class="text-gray-400 mt-2">A personal portfolio website built with HTML, CSS, and JavaScript
+                            to showcase projects, skills, and achievements with a responsive design.</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-row md:flex-col justify-center md:ml-4">
+                        <!-- View Button -->
+                        <div class="mb-2 md:mb-0 md:mr-0 mr-2 md:mb-2">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto">View <i class="bi bi-eye"></i> </button>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div>  
+                            <button class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto">Download  </button>
+                        </div>
+                    </div>   
+                </div>
+
+                <!-- Project Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex flex-col md:flex-row">
+                    <!-- Left Column: Thumbnail (80px width) -->
+                     <div class="w-full md:w-[80px] mb-4 md:mb-0">
+                        <img src="https://via.placeholder.com/400x300" alt="Project Thumbnail"
+                            class="w-auto h-full object-cover rounded-md">
+                    </div>
+
+                    <!-- Middle Column: Title and Description (60%) -->
+                    <div class="w-5/6 pl-6">
+                        <h3 class="text-md font-semibold text-gray-800">Perfex CRM | Codeigniter CRM using bootstrap |
+                            Modules system to add new features</h3>
+                        <p class="text-gray-400 mt-2">Codeigniter based PHP Perfex crm proejct which can be expanded
+                            with new modules and themes, powerful features to manage contact, clients, leads, proects,
+                            tasks, timesheets, emails.</p>
+                    </div>
+
+                    <div class="w-full md:w-auto flex flex-row md:flex-col justify-center md:ml-4">
+                        <!-- View Button -->
+                        <div class="mb-2 md:mb-0 md:mr-0 mr-2 md:mb-2">
+                            <button class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto">View <i class="bi bi-eye"></i> </button>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div>  
+                            <button class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto">Download  </button>
+                        </div>
+                    </div>   
+                </div>
+
+                 <!-- Pagination Section -->
+                <div class="flex justify-center mt-8">
+                    <nav aria-label="Page navigation">
+                        <ul class="inline-flex items-center space-x-4">
+                            <li>
+                                <button class="bg-gray-200 text-gray-600 py-2 px-4 rounded-md hover:bg-gray-300 disabled:opacity-50" disabled>
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">1</button>
+                            </li>
+                            <li>
+                                <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">2</button>
+                            </li>
+                            <li>
+                                <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">3</button>
+                            </li>
+                            <li>
+                                <button class="bg-gray-200 text-gray-600 py-2 px-4 rounded-md hover:bg-gray-300">
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-4">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Footer Content Container -->
+            <div class="flex flex-col sm:flex-row justify-between items-center sm:space-x-6">
+                <!-- Left Side: Copyright Text (Centered on mobile) -->
+                <p class="text-center sm:text-left mb-2 sm:mb-0">&copy; 2024 CMS. All Rights Reserved.</p>
+
+                <!-- Right Side: Contact, Disclaimer, and Policy Links (Centered and spaced correctly on mobile) -->
+                <div
+                    class="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center sm:justify-end text-sm">
+                    <a href="mailto:help@php19.com"
+                        class="text-yellow-200 hover:text-orange-400 transition-all">help@php19.com</a>
+                    <a href="#" class="text-yellow-200 hover:text-orange-400 transition-all">Disclaimer</a>
+                    <a href="#" class="text-yellow-200 hover:text-orange-400 transition-all">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: JavaScript for mobile navbar toggle -->
+    <script>
+        const navbarToggle = document.getElementById("navbarToggle");
+        const navbarLinks = document.querySelector("nav > div > div > div");
+
+        navbarToggle.addEventListener("click", () => {
+            navbarLinks.classList.toggle("hidden");
+        });
+
+        const nToggle = document.getElementById('navbarToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+        const dToggle = document.getElementById('DesktopNav');
+
+        nToggle.addEventListener('click', () => {
+            // Toggle the display of the mobile navbar
+            mobileNavbar.classList.toggle('hidden');
+            dToggle.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
