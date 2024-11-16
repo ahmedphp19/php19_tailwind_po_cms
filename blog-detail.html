@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | PHP19</title>
+    <title>Blog Details | PHP19</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,7 +62,7 @@
                 <a class="text-gray-800 hover:text-blue-500" href="#">Projects</a>
                 <a class="text-gray-800 hover:text-blue-500" href="#">Freelancers</a>
                 <a class="text-gray-800 hover:text-blue-500" href="/about.html">About</a>
-                <a class="text-gray-800 hover:text-blue-500" href="/contact.html">Contact</a>
+                <a class="text-red-800 hover:text-blue-500" href="/contact.html">Contact & Support</a>
             </div>
         </div>
     </nav>
@@ -84,7 +84,7 @@
     <header class="bg-blue-700 text-white pb-4 pt-12">
         <div class="max-w-screen-xl mx-auto px-4">
             <!-- Header Title (Left-aligned) -->
-            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Contact Us</h1>
+            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Blog Post</h1>
 
             <!-- Breadcrumb Navigation (Left-aligned with Icons and Tailwind Styling) -->
             <nav class="sm:mt-2">
@@ -103,7 +103,15 @@
                     </li>
 
                     <!-- About Us Link -->
-                    <li class="text-white-500">Contact Us</li>
+                    <li class="text-white-500">Blog</li>
+
+                    <!-- Separator Icon -->
+                    <li class="text-white-400">
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <!-- About Us Link -->
+                    <li class="text-white-500">Blog Post Details</li>
                 </ol>
             </nav>
 
@@ -114,48 +122,55 @@
     <main class="bg-gray-50 py-8">
         <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-             <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md space-y-6">
-                <!-- Blog Post Card -->
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-56 object-cover rounded-md mb-4">
-                    <h2 class="text-xl font-semibold text-gray-800">Blog Post Title</h2>
-                    <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nunc non neque sollicitudin, sit amet tincidunt ex auctor.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Read More &rarr;</a>
-                </div>
+            <!-- Left Column: Page Content -->
+            <div class="lg:col-span-2 bg-white p-4 rounded-lg shadow-md">
+                <div class="space-y-6">
+            
+                    <!-- Publish Date and Author (Left-aligned with Icons) -->
+                    <div class="flex items-center space-x-6 mt-2 text-left text-sm text-white-400">
+                        <!-- Calendar Icon -->
+                        <div class="flex items-center space-x-2 text-gray-500">
+                            <i class="bi bi-calendar-event text-gray-400"></i>
+                            <span>March 1, 2024</span>
+                        </div>
+            
+                        <!-- Author Icon -->
+                        <div class="flex items-center space-x-2 text-gray-500">
+                            <i class="bi bi-person-fill text-gray-400"></i>
+                            <span>by John Doe</span>
+                        </div>
+                    </div>
+            
+                    <!-- About Us Content -->
+                    <h2 class="text-2xl font-semibold text-gray-800">Blog Details</h2>
 
-                <!-- Repeat for each blog post (you would loop through this in a dynamic system) -->
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <img src="https://via.placeholder.com/600x400" alt="Blog Image" class="w-full h-56 object-cover rounded-md mb-4">
-                    <h2 class="text-xl font-semibold text-gray-800">Blog Post Title</h2>
-                    <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nunc non neque sollicitudin, sit amet tincidunt ex auctor.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block">Read More &rarr;</a>
-                </div>
+                     <!-- Featured Image -->
+        <div class="w-full">
+            <img src="https://via.placeholder.com/1200x500" alt="Featured Image" class="w-full h-auto object-cover rounded-lg mb-6">
+        </div>
 
-                <!-- Pagination -->
-                <div class="flex justify-center mt-8">
-                    <nav aria-label="Page navigation">
-                        <ul class="inline-flex items-center space-x-4">
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Previous</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">1</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">2</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">3</a>
-                            </li>
-                            <li>
-                                <a href="#" class="px-4 py-2 text-sm font-semibold text-gray-800 border border-gray-300 rounded-lg hover:bg-blue-600 hover:text-white">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <p class="text-gray-600 text-lg">
+                        We are a passionate team of developers dedicated to creating high-quality and sustainable web solutions.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra, neque ac hendrerit consequat, sapien nisi aliquam purus, 
+                        a fermentum neque sapien vitae urna. Integer ac erat at eros varius tincidunt ut nec est. Donec vel sem auctor, malesuada nulla ut, 
+                        suscipit orci. Phasellus bibendum ligula euismod dolor gravida malesuada. Ut aliquet malesuada nulla, non varius nunc fermentum nec.
+                    </p>
+                    <p class="text-gray-600 text-lg">
+                        Our team consists of experienced professionals with a wide range of skills, from web design to back-end development. 
+                        We prioritize user experience, scalability, and performance in every project we undertake. Nulla facilisi. 
+                        Integer nec enim augue. In auctor libero sed nunc feugiat cursus. Cras accumsan, dui eget lacinia consectetur, metus orci maximus dolor, 
+                        vitae vulputate libero urna eget augue. Aliquam erat volutpat.
+                    </p>
+                    <p class="text-gray-600 text-lg">
+                        Whether you're looking to build a small website or a complex web application, we are here to help you bring your ideas to life. 
+                        Fusce feugiat quam a ligula tincidunt, at scelerisque eros mollis. Nam vitae arcu a enim scelerisque cursus. Curabitur aliquet 
+                        purus ut mauris efficitur, at tincidunt ligula tristique. Duis condimentum, dui non tristique vehicula, velit sem venenatis 
+                        ante, vitae auctor libero felis at urna. Etiam pharetra auctor lectus, sed dapibus orci laoreet id.
+                    </p>
+            
                 </div>
             </div>
-
-
+            
 
             <!-- Right Column: Sidebar with Widgets -->
             <div class="bg-gray-50 space-y-6">
