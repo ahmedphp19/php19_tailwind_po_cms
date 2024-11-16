@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfex CRM, PHP Codeigniter Project | PHP19</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap Icons (optional for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS for Sticky Navbar (optional) -->
+    <style>
+        /* Optional: For sticky navbar effect */
+        .navbar {
+            transition: top 0.3s;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+    <!-- Navbar (Fixed on Scroll) -->
+    <nav class="navbar fixed top-0 left-0 w-full bg-white shadow-md z-10">
+        <div class="max-w-screen-xl mx-auto px-4 py-2">
+            <div class="flex items-center justify-between">
+                <!-- Logo or Brand Name -->
+                <a class="text-xl font-bold text-gray-800" href="#">PHP19</a>
+
+                <!-- Hamburger Menu for Mobile (Aligned to the Right) -->
+                <button class="lg:hidden text-gray-900 ml-auto mr-3 text-[1.4rem]" id="navbarToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Main Navigation Links on the Right (Desktop Only) -->
+                <div id="DesktopNav" class="hidden lg:flex items-center space-x-6 ml-auto mr-5">
+                    <a class="text-gray-800 hover:text-blue-500" href="/index.html">Home</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/projects.html">Projects</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/blog-archive.html">Blog</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="#">Freelancers</a>
+                    <a class="text-gray-800 hover:text-blue-500" href="/about.html">About</a>
+                    <a class="text-blue-800 hover:text-blue-500" href="/contact.html">Contact | Support
+
+                    </a>
+                </div>
+
+                <!-- Right-aligned "My Dashboard" Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="#"
+                        class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">My
+                        Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar (Hidden by default, shown on click) -->
+        <div class="lg:hidden hidden bg-gray-100" id="mobileNavbar">
+            <div class="flex flex-col items-end space-y-4 py-4 ml-auto mr-5">
+                <a class="text-gray-800 hover:text-blue-500" href="/index.html">Home</a>
+                <a class="text-gray-800 hover:text-blue-500" href="#">Projects</a>
+                <a class="text-gray-800 hover:text-blue-500" href="#">Freelancers</a>
+                <a class="text-gray-800 hover:text-blue-500" href="/about.html">About</a>
+                <a class="text-red-800 hover:text-blue-500" href="/contact.html">Contact & Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Optional: JavaScript to toggle the mobile navbar -->
+    <script>
+        const nToggle = document.getElementById('navbarToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+        const dToggle = document.getElementById('DesktopNav');
+
+        nToggle.addEventListener('click', () => {
+            // Toggle the display of the mobile navbar
+            mobileNavbar.classList.toggle('hidden');
+            dToggle.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Header Section (Full-width with background color, title, breadcrumbs, date, and author) -->
+    <header class="bg-blue-700 text-white pb-4 pt-12">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Header Title (Left-aligned) -->
+            <h1 class="text-1xl mb-0 sm:text-2xl font-bold mt-6 text-left">Perfex CRM, Codeigniter PHP Mysql CRM for
+                small business</h1>
+
+            <!-- Breadcrumb Navigation (Left-aligned with Icons and Tailwind Styling) -->
+            <!-- Breadcrumb Navigation (Left-aligned with Icons and Tailwind Styling) -->
+            <nav class="sm:mt-2">
+                <ol class="flex flex-wrap items-center space-x-3 text-sm sm:text-base text-gray-300">
+                    <!-- Home Link with Icon -->
+                    <li class="flex items-center">
+                        <a href="/" class="text-white-500 hover:text-white-700 flex items-center space-x-1">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <!-- Separator Icon -->
+                    <li class="text-white-400">
+                        <i class="bi bi-chevron-right"></i>
+                    </li>
+
+                    <!-- Projects Link -->
+                    <li class="text-white-500">Projects</li>
+
+                    <!-- Separator Icon -->
+                    <li class="text-white-400 break-words">
+                        <i class="bi bi-chevron-right"></i> Perfex CRM, codeigniter php mysql project for small business
+
+                    </li>
+
+                </ol>
+            </nav>
+
+
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="bg-gray-50 py-8">
+        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Column: Page Content -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Content Card -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+
+                    <!-- Featured section -->
+                    <div x-data="{ isModalOpen: false, token: '' }">
+                        <!-- Featured Section -->
+                        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0">
+                    
+                            <!-- Left Column: Image Slider (50%) -->
+                            <div class="w-full md:w-1/2">
+                                <!-- Image Slider -->
+                                <div x-data="{ currentImage: 0, images: ['https://via.placeholder.com/1200x500', 'https://via.placeholder.com/1200x500?text=Second+Image'] }" class="relative">
+                    
+                                    <!-- Slider Images -->
+                                    <div class="w-full h-auto">
+                                        <template x-for="(image, index) in images" :key="index">
+                                            <img :src="image" :alt="'Image ' + (index + 1)" x-show="currentImage === index" class="w-full h-auto object-cover rounded-lg transition duration-500">
+                                        </template>
+                                    </div>
+                    
+                                    <!-- Navigation buttons -->
+                                    <button @click="currentImage = (currentImage === 0 ? images.length - 1 : currentImage - 1)"
+                                            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-blue-700 p-1 rounded-full focus:outline-none hover:bg-gray-400 transition-all">
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+                    
+                                    <button @click="currentImage = (currentImage === images.length - 1 ? 0 : currentImage + 1)"
+                                            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-blue-700 p-1 rounded-full focus:outline-none hover:bg-gray-400 transition-all">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                    
+                            <!-- Right Column: Content and Details -->
+                            <div class="w-full md:w-1/2 md:pl-6 space-y-4">
+                    
+                                <!-- Description -->
+                                <p class="text-gray-600 text-lg">
+                                    We are a passionate team of developers dedicated to creating high-quality and sustainable web solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra, neque ac hendrerit consequat, sapien nisi aliquam purus, a fermentum neque sapien vitae urna.
+                                </p>
+                    
+                                <!-- Publish Date, Author, Total Downloads, Comments -->
+                                <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-500">
+                                    <!-- Publish Date -->
+                                    <div class="flex items-center space-x-2">
+                                        <i class="bi bi-calendar-event text-gray-400"></i>
+                                        <span>March 1, 2024</span>
+                                    </div>
+                    
+                                    <!-- Total Downloads -->
+                                    <div class="flex items-center space-x-2">
+                                        <i class="bi bi-download text-gray-400"></i>
+                                        <span>1200</span>
+                                    </div>
+                    
+                                    <!-- Total Comments -->
+                                    <div class="flex items-center space-x-2">
+                                        <i class="bi bi-chat-left-text text-gray-400"></i>
+                                        <span>45</span>
+                                    </div>
+                                </div>
+                    
+                                <!-- Action Buttons -->
+                                <div class="flex space-x-4 mt-6">
+                                    <!-- Live Demo Button -->
+                                    <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 w-full md:w-auto text-center">Live Demo <i class="bi bi-eye"></i> </a>
+                    
+                                    <!-- Download Button -->
+                                    <a href="#" @click.prevent="isModalOpen = true" class="bg-green-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-green-700 w-full md:w-auto text-center">Download <i class="bi bi-download"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Modal: Token Input -->
+                        <div x-show="isModalOpen" x-transition.opacity class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+                            <div class="bg-white p-6 rounded-lg shadow-lg w-96 space-y-4">
+                                <h3 class="text-xl font-semibold text-center">Enter Your TOKEN</h3>
+                                <div class="space-y-4">
+                                    <!-- Token Input Field -->
+                                    <input type="text" x-model="token" placeholder="Enter your token" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    
+                                    <!-- Submit Button -->
+                                    <div class="flex justify-between">
+                                        <button @click="isModalOpen = false" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400">Cancel</button>
+                                        <button @click="alert('Starting download...'); isModalOpen = false" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">Start Download</button>
+                                    </div>
+                    
+                                    <!-- Link to Get Token -->
+                                    <p class="text-center text-sm text-gray-500">
+                                        Don't have a token? <a href="#" class="text-blue-600 hover:text-blue-800">GET HERE</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- BLOG CONTENT SECTION (Full Width) -->
+                    <div class="mt-8 space-y-6">
+                        <!-- Blog Post Text -->
+                        <p class="text-2xl font-bold text-gray-800">Full Details</p>
+
+                        <p class="text-gray-600 text-lg">
+                            We are a passionate team of developers dedicated to creating high-quality and sustainable
+                            web solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra, neque
+                            ac hendrerit consequat, sapien nisi aliquam purus, a fermentum neque sapien vitae urna.
+                            Integer ac erat at eros varius tincidunt ut nec est. Donec vel sem auctor, malesuada nulla
+                            ut, suscipit orci.
+                        </p>
+
+                        <p class="text-gray-600 text-lg">
+                            Our team consists of experienced professionals with a wide range of skills, from web design
+                            to back-end development. We prioritize user experience, scalability, and performance in
+                            every project we undertake. Nulla facilisi. Integer nec enim augue. In auctor libero sed
+                            nunc feugiat cursus. Cras accumsan, dui eget lacinia consectetur, metus orci maximus dolor,
+                            vitae vulputate libero urna eget augue.
+                        </p>
+
+                        <p class="text-gray-600 text-lg">
+                            Whether you're looking to build a small website or a complex web application, we are here to
+                            help you bring your ideas to life. Fusce feugiat quam a ligula tincidunt, at scelerisque
+                            eros mollis. Nam vitae arcu a enim scelerisque cursus. Curabitur aliquet purus ut mauris
+                            efficitur, at tincidunt ligula tristique. Duis condimentum, dui non tristique vehicula,
+                            velit sem venenatis ante, vitae auctor libero felis at urna. Etiam pharetra auctor lectus,
+                            sed dapibus orci laoreet id.
+                        </p>
+
+                        <p class="text-gray-600 text-lg">
+                            In this digital age, businesses are constantly seeking efficient, user-friendly systems to
+                            streamline their processes. Our CRM solution is designed to simplify customer relationship
+                            management, providing features like project tracking, team collaboration, and analytics.
+                            With our platform, you can manage your clients' data, track sales performance, and
+                            communicate effectively with your team all in one place.
+                        </p>
+
+                        <!-- Call to Action -->
+                        <p class="text-gray-600 text-lg">
+                            Ready to take your business to the next level? Join us today and experience seamless CRM
+                            solutions. Click the buttons above to start a live demo or download the software!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Comments Card -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Leave a Comment</h3>
+
+                    <!-- Comment Form -->
+                    <form action="#" method="POST" class="space-y-4">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block text-gray-700">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-gray-700">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <!-- Comment Textarea -->
+                        <div>
+                            <label for="comment" class="block text-gray-700">Your Comment</label>
+                            <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..."
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit"
+                                class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                Submit Comment
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Existing Comments Section -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">3 Comments</h3>
+
+                        <!-- Single Comment -->
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://via.placeholder.com/40" alt="User Avatar"
+                                    class="w-10 h-10 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-gray-800">John Doe</p>
+                                    <p class="text-sm text-gray-500">March 1, 2024</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                This is a great post! I really appreciate the insights shared here. Looking forward to
+                                more posts like this.
+                            </p>
+                        </div>
+
+                        <!-- Another Comment -->
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://via.placeholder.com/40" alt="User Avatar"
+                                    class="w-10 h-10 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-gray-800">Jane Smith</p>
+                                    <p class="text-sm text-gray-500">March 2, 2024</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                I agree! The content is informative and very well written. Keep it up! 👍
+                            </p>
+                        </div>
+
+                        <!-- Another Comment -->
+                        <div class="bg-gray-50 p-4 rounded-lg shadow-sm mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="https://via.placeholder.com/40" alt="User Avatar"
+                                    class="w-10 h-10 rounded-full">
+                                <div>
+                                    <p class="font-semibold text-gray-800">Michael Lee</p>
+                                    <p class="text-sm text-gray-500">March 3, 2024</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-2">
+                                Great post, very detailed and thorough. I learned a lot from reading this. Thanks for
+                                sharing!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar with Widgets -->
+            <div class="bg-gray-50 space-y-6">
+
+                <!-- Author Widget -->
+                <div class="bg-white rounded-md shadow-md p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4">Author of this Project</h4>
+                    <div class="flex items-start space-x-6">
+                        <!-- Author Image with 40% width -->
+                        <img src="https://via.placeholder.com/150" alt="Author"
+                            class="sm:w-30 w-30 h-auto object-cover rounded-md">
+
+                        <!-- Author Info Section -->
+                        <div class="flex flex-col justify-between space-y-2">
+                            <!-- Author Name -->
+                            <p class="font-semibold text-blue-800 text-md">Ahmed</p>
+
+                            <!-- Author Bio -->
+                            <p class="text-gray-600 text-sm">8 Years of experience in PHP
+                                Development <br><span class="text-green-500">"Hi, I'm ready to give Technical
+                                    Support"</span> </p>
+
+                            <!-- Live Chat Button with Bootstrap Icon -->
+                            <button
+                                class="bg-blue-600 text-white py-1 px-2 rounded-lg text-sm mt-2 hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                                <!-- Chat Icon -->
+                                <i class="bi bi-chat-dots"></i>
+                                <span>Live Chat</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Links Widget -->
+                <div class="bg-white rounded-md shadow-md p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4">Browse by Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="" class="text-blue-600 hover:text-blue-800">CRM (20)</a></li>
+                        <li><a href="/about.html" class="text-blue-600 hover:text-blue-800">Billing (12)</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Ecommerce (10)</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Laravel (5)</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Codeigniter (2)</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">Business ERP (1)</a></li>
+                        <li><a href="#" class="text-blue-600 hover:text-blue-800">School Management (22)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white py-4">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Footer Content Container -->
+            <div class="flex flex-col sm:flex-row justify-between items-center sm:space-x-6">
+                <!-- Left Side: Copyright Text (Centered on mobile) -->
+                <p class="text-center sm:text-left mb-2 sm:mb-0">&copy; 2024 CMS. All Rights Reserved.</p>
+
+                <!-- Right Side: Contact, Disclaimer, and Policy Links (Centered and spaced correctly on mobile) -->
+                <div
+                    class="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center sm:justify-end text-sm">
+                    <a href="mailto:help@php19.com"
+                        class="text-yellow-200 hover:text-orange-400 transition-all">help@php19.com</a>
+                    <a href="#" class="text-yellow-200 hover:text-orange-400 transition-all">Disclaimer</a>
+                    <a href="#" class="text-yellow-200 hover:text-orange-400 transition-all">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+
+    <!-- Optional: JavaScript for mobile navbar toggle -->
+    <script>
+        const navbarToggle = document.getElementById("navbarToggle");
+        const navbarLinks = document.querySelector("nav > div > div > div");
+
+        navbarToggle.addEventListener("click", () => {
+            navbarLinks.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
