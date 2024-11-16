@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Homepage</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS for Sticky Navbar -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            transition: top 0.3s;
+        }
+
+        .header {
+            padding: 60px 0 40px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .header p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .card-thumbnail {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            margin-right: 5px;
+        }
+
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card-body {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .card-body img {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (Fixed on Scroll) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">CMS Frontend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Welcome to Our CMS</h1>
+        <p>Explore the latest and top-rated projects.</p>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" class="form-control" placeholder="Search Projects...">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Recent Projects Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Recent Added Projects</h5>
+                    </div>
+                    <div class="card-body card-columns">
+                        <!-- Inner Cards (Recent Projects) -->
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/120" alt="Project 1" class="card-thumbnail">
+                                <div>
+                                    <h6>Project 1</h6>
+                                    <p>This is a brief description of the recent project.</p>
+                                    <div>
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-success">HTML</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/120" alt="Project 2" class="card-thumbnail">
+                                <div>
+                                    <h6>Project 2</h6>
+                                    <p>This project focuses on web development using React.</p>
+                                    <div>
+                                        <span class="badge bg-danger">React</span>
+                                        <span class="badge bg-warning">JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Downloaded Projects Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Top Downloaded Projects</h5>
+                    </div>
+                    <div class="card-body card-columns">
+                        <!-- Inner Cards (Top Downloaded Projects) -->
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/120" alt="Project 3" class="card-thumbnail">
+                                <div>
+                                    <h6>Project 3</h6>
+                                    <p>This is one of the top downloaded projects of the month.</p>
+                                    <div>
+                                        <span class="badge bg-info">Vue.js</span>
+                                        <span class="badge bg-secondary">CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/120" alt="Project 4" class="card-thumbnail">
+                                <div>
+                                    <h6>Project 4</h6>
+                                    <p>Top-rated app with features built using Angular and TypeScript.</p>
+                                    <div>
+                                        <span class="badge bg-primary">Angular</span>
+                                        <span class="badge bg-dark">TypeScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2024 CMS. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Optional jQuery Script for Sticky Navbar (Optional) -->
+    <script>
+        // Sticky navbar effect on scroll
+        window.onscroll = function() {stickyNavbar()};
+
+        var navbar = document.querySelector(".navbar");
+        var sticky = navbar.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+</html>
